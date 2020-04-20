@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane2" prefHeight="583.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PcCleanerController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0e375e" height="102.0" stroke="TRANSPARENT" strokeType="INSIDE" width="605.0" />
+      <Label layoutX="258.0" layoutY="132.0" text="Login">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="key" layoutX="149.0" layoutY="241.0" prefHeight="51.0" prefWidth="334.0" promptText="Licence key" />
+      <Button layoutX="226.0" layoutY="344.0" mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="153.0" text="Log In" />
+      <Hyperlink layoutX="236.0" layoutY="433.0" onAction="#handle" text="Create an Account!">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

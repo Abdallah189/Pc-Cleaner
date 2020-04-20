@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="583.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PcCleanerController">
+   <children>
+      <TextField fx:id="nameField" layoutX="266.0" layoutY="193.0" prefHeight="25.0" prefWidth="227.0" />
+      <TextField fx:id="emailField" layoutX="266.0" layoutY="249.0" prefHeight="25.0" prefWidth="221.0" />
+      <TextField fx:id="phoneField" layoutX="266.0" layoutY="306.0" prefHeight="25.0" prefWidth="221.0" />
+      
+      <RadioButton layoutX="266.0" layoutY="421.0" mnemonicParsing="false" selected="true" text="Free month">
+         <toggleGroup>
+            <ToggleGroup fx:id="payment" />
+         </toggleGroup></RadioButton>
+      <RadioButton layoutX="266.0" layoutY="453.0" mnemonicParsing="false" text="Two year" toggleGroup="$payment" />
+      <RadioButton layoutX="399.0" layoutY="421.0" mnemonicParsing="false" text="Yearly " toggleGroup="$payment" />
+      <RadioButton layoutX="399.0" layoutY="453.0" mnemonicParsing="false" text="Three year" toggleGroup="$payment" />
+      <RadioButton layoutX="266.0" layoutY="488.0" mnemonicParsing="false" text="Lifetime" toggleGroup="$payment" />
+      <Label layoutX="156.0" layoutY="197.0" text="Name" />
+      <Label layoutX="156.0" layoutY="253.0" text="Email detail" />
+      <Label layoutX="156.0" layoutY="310.0" text="Phone number" />
+      <Label layoutX="156.0" layoutY="369.0" text="Location" />
+      <Label layoutX="156.0" layoutY="421.0" text="Payment" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0e375e" height="102.0" stroke="TRANSPARENT" strokeType="INSIDE" width="605.0" />
+      <Label layoutX="250.0" layoutY="121.0" text="Register">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn" layoutX="456.0" layoutY="524.0" mnemonicParsing="false" onAction="#insertButton" prefHeight="35.0" prefWidth="97.0" text="Sign up" />
+      <ComboBox fx:id="location" layoutX="266.0" layoutY="365.0" prefHeight="25.0" prefWidth="221.0" />
+      <Hyperlink layoutX="55.0" layoutY="530.0" onAction="#already" text="Already have an account? Login!" />
+   </children>
+</AnchorPane>

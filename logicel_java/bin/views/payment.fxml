@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="583.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PcCleanerController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0e375e" height="102.0" layoutX="-5.0" stroke="TRANSPARENT" strokeType="INSIDE" width="615.0" />
+      <Label layoutX="251.0" layoutY="144.0" text="Payment">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,180 @@
+/*----------------------------------
+MAIN STYLEHSEET
+
+1-HTML ELEMENTS
+2-LOADING PAGE
+3-CONTAINERS
+4-MENU
+5-SHEETS
+6-CONTENT
+7-HELPERS
+----------------------------------*/
+
+/* 1-HTML ELEMENTS */
+body{
+	margin:0;
+	font-family: 'Lato', sans-serif;
+}
+h1{
+	font-weight: 100;
+}
+
+
+/* 2-LOADING PAGE */
+.td-preloading{
+	position:fixed;
+	width:100%;
+	height:100%;
+	background:#145158;
+	z-index:2000;
+}
+.td-preloading span{
+	position:fixed;
+	color:white;
+	font-size:56px;
+	left:calc(50% - 28px);
+	top:calc(50% - 28px);
+}
+
+
+/* 3-CONTAINERS */
+.container{
+	width:100%;
+}
+.td-container{
+	overflow:hidden;
+	position:absolute;
+	width:100%;
+	height:100%;
+	
+	background-size:cover;
+	perspective:5000px;
+}
+.td-sheets-container{
+	position:absolute;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	perspective:1000px;
+	z-index:1;
+	transition:transform 1.5s, opacity 1.5s;
+}
+.td-sheets-container.td-hide{
+	transform:translateZ(-5000px);
+	opacity:.2;
+}
+
+
+/* 4-MENU */
+.td-menu{
+	position:absolute;
+	top:40%;
+	right:15px;
+	border-radius:50px;
+	background-color:black;
+	perspective:300px;
+	z-index:1000;
+}
+.td-menu-item{
+	margin:8px;
+	padding:10px;
+	width:40px;
+	height:40px;
+	border-radius:20px;
+	background-color:white;
+	opacity:.5;
+	transition:opacity .3s, transform 1s;
+	cursor:pointer;
+}
+.td-menu-item:hover{
+	transform:rotateY(50deg);
+}
+.td-menu-item i{
+	font-size:20px;
+}
+.td-menu-item:hover,.td-menu-item.active{
+	opacity:1;
+}
+
+
+/* 5-SHEETS */
+.td-sheet{
+	background-color: transparent; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, RGBA(74, 252, 208, 0.05) , RGBA(69, 19, 88, 0.3)); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, RGBA(74, 252, 208, 0.05) , RGBA(69, 19, 88, 0.3)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:white;
+	cursor:default;
+}
+.td-sheet.active{
+	background-color: transparent;
+}
+.td-sheet-icon, .td-sheet-title{
+	display:none;
+}
+.td-sheet{
+	position:absolute;
+	left:10vw;
+	top:10vh;
+	width:80vw;
+	height:80vh;
+	border-radius:3px;
+	overflow:hidden;
+	opacity:0.1;
+	background-color:rgba(255,255,255,0.25);
+	transform-origin:center center -60vh;
+	transition:opacity 1s, background-color 1s, transform 1s;
+}
+.td-sheet.active{
+	opacity:1;
+	z-index:100;
+}
+
+
+/* 6-CONTENT */
+.td-aboutus{
+	overflow:hidden;
+	padding:15px;
+	transition:background-color .3s;
+}
+.td-aboutus:hover{
+	background-color:rgba(0,0,0,0.3);
+}
+.td-aboutus .td-aboutus-header{
+	padding:50px;
+}
+.td-aboutus .td-aboutus-header span{
+	font-size:100px;
+	transition:transform .7s, opacity .6s;
+}
+.td-aboutus:hover .td-aboutus-header span{
+	transform:scale(2.5);
+	opacity:0;
+}
+.td-aboutus .td-aboutus-header h3{
+	font-weight:100;
+	transition:opacity .3s;
+}
+.td-aboutus:hover .td-aboutus-header h3{
+	opacity:0;
+}
+.td-aboutus p{
+	position:absolute;
+	padding:15px;
+	top:100%;
+	transition:top .6s;
+}
+.td-aboutus:hover p{
+	top:30%;
+}
+
+
+/* 7-HELPERS */
+.row{
+	margin-bottom:30px;
+}
+.whitelinks a{
+	color: white !important;
+}
+.whitelinks a:hover{
+	text-decoration: none;
+}
